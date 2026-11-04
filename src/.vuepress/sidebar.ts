@@ -6,8 +6,6 @@ export default sidebar({
   "/": [
     "DailyRoutine",
     "Fitness",
-    // 读书笔记架构更换到 docsify，不能使用相对链接
-    { text: "读书笔记", icon: "fa6-brands:readme", link: "https://newzone.top/reading/" },
     // 指定显示页面
     {
       text: "🧰 应用手册",
@@ -25,13 +23,6 @@ export default sidebar({
           children: ["design.md"],
         },
       ],
-    },
-    {
-      text: "🌐 页面开发",
-      icon: "",
-      prefix: "web/",
-      collapsible: true,
-      children: "structure",
     },
     {
       text: "🏗️ 网站部署",
