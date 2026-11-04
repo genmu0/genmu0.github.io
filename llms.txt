@@ -4,7 +4,7 @@
 
 ## Pages
 
-- [LearnData 开源笔记](https://newzone.top/) - 演示站：你正在浏览 LearnData 模板的默认样态。Use this template 创建仓库后部署得到的就是这套站点框架，按需替换内容即可上线属于自己的知识库。
+- [BloGenMusings](https://newzone.top/) - A blog of Genmu's musings
 - [必备应用](https://newzone.top/apps/Applist.html) - 正在寻找好用的Windows软件？这份必备应用清单为你精心筛选了从知识管理到设计开发的各类工具。无论你是效率达人还是开发者，都能在这里找到优化工作流的最佳选择。
 - [Chrome 扩展](https://newzone.top/apps/Chrome.html) - 想提升Chrome使用效率？这份超强扩展清单，帮你一站式解决标签页管理、网页监控、图片视频下载等需求。精选多款实用插件，全面优化你的浏览体验与工作流。
 - [平面设计](https://newzone.top/apps/design.html) - 想提升设计效率？本文为你精选多款设计利器：从Excalidraw等电子白板，到Eagle图片管理，再到海量免费可商用字体。一站式解决你的设计灵感与工具需求。
