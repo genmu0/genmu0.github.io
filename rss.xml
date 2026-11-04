@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>en-us</language>
-    <pubDate>Wed, 04 Nov 2026 20:08:26 GMT</pubDate>
-    <lastBuildDate>Wed, 04 Nov 2026 20:08:26 GMT</lastBuildDate>
+    <pubDate>Wed, 04 Nov 2026 20:24:53 GMT</pubDate>
+    <lastBuildDate>Wed, 04 Nov 2026 20:24:53 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -19,18 +19,22 @@
       <source url="https://newzone.top/rss.xml">Colorblind Math Diagrams</source>
       <description>想养成改变生活的良好习惯？探索这套每日仪式：从5AM Club的晨间方案，到GTD时间管理，再到自我监控。学习如何通过固定流程，实现高效的自我提升。</description>
       <pubDate>Wed, 04 Nov 2026 16:35:52 GMT</pubDate>
-      <content:encoded><![CDATA[<p>每日仪式是个人生活习惯的核心。它看起来可能会显得固化、死板、功利，有人反馈「透露着一股形式主义气息」，但是，这正是我想要的：<strong>遵循一个固定、程序化的流程，有规律地养成习惯</strong>，实现自我提升。</p>
+      <content:encoded><![CDATA[<p>In this article, we will discuss strategies to make colorblind friendly diagrams in the mathematical sciences. We use Inkscape as our open-source SVG file editor and export to PNG at any resolution.</p>
 <div class="hint-container tip">
 <p class="hint-container-title">Tips</p>
-<p>详细的身体护理步骤请参阅《<a href="https://newzone.top/the-savvy-life-manual/" target="_blank" rel="noopener noreferrer">精致生活手册</a>》，包含血管拉伸、淋巴按摩、保湿护肤等专题。</p>
+<p>Approximately 1 in 12 males and 1 in 200 females have some form of colorblindness.</p>
 </div>
-<h2>仪式清单</h2>
-<h3>🌅 晨间仪式 (05:00 - 08:00)</h3>
+<h2>Color Communicates</h2>
+<p>Color is an excellent way to convey information in a figure, displaying the similarity or dissimilarity between objects in space. While black and white diagrams are necessarily colorblind friendly, we lose a channel of communication to convey similarity. We want to split the middle in terms of user accessibility and information density.</p>
+<h2>Okabe-Ito Color Palette</h2>
+<p>The Okabe-Ito color palette is an excellent discrete color palette for qualitative color palettes. It is available in most programming languages, becoming included in base R as of version 4.0.0. This makes it excellent for communicating categories or classes in a diagram.
+<img src="https://github.com/genmu0/BSM-Recolor/blob/main/Figure 16.4.A.png" alt loading="lazy">
+However, there are a few things we need to test when making these diagrams that us individuals with color vision may take for granted.</p>
 <p><strong>目标</strong>：唤醒身体，确立今日目标，利用黄金时间完成高价值工作。</p>
 <p>| 时间      | 活动           | 关键细节                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | :</p>
 ]]></content:encoded>
-      <enclosure url="https://img.newzone.top/2022-11-02-11-02-43.png?imageMogr2/format/webp &quot;GTD 任务转移到清单&quot;" type="image/"/>
+      <enclosure url="https://github.com/genmu0/BSM-Recolor/blob/main/Figure%2016.4.A.png" type="image/png"/>
     </item>
     <item>
       <title>博客文章样例 2</title>
