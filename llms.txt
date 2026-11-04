@@ -72,6 +72,3 @@
 - [置身事内](https://newzone.top/reading/#/5_商业与社会/置身事内) - 《置身事内》基本是概念介绍，对于问题浅尝辄止，想通盘理解政府的税制变革和运作模式可以略读。不能明白评分为什么那么高。
 - [苏世民：我的经验与教训](https://newzone.top/reading/#/5_商业与社会/苏世民_我的经验与教训) - 《苏世民：我的经验与教训》阅读体验不错，其中故事化的情节让本书更有趣，比如：「第一份工作是为了获取比同班同学更高的工资 (一万)，强行跟对方招聘人员，说我要 10500 美元」，「工作初期的工作是审核对方公...
 - [读书笔记](https://newzone.top/reading/#/README) - 曾经我尝试使用 Notion 来管理书单，用 Calibre、Logseq 来对电子书做读书笔记。我渐渐发现自己几乎从不回头再看这些电子书的笔记。因此，我决定放弃电子书这种方式，而将我的注意力更多地集中在实体书籍上的摘要...
-- [评论插件](https://newzone.top/web/Comments.html) - 网站评论插件深度指南：对比Waline、Giscus与Gitalk。详解Waline从Vercel部署到Linux配置及数据库迁移全流程，搭建安全高效评论系统。
-- [docsify](https://newzone.top/web/docsify.html) - docsify建站避坑指南：汇总插件配置、本地Serve命令及GitHub Pages部署等常见问题解决方案。助你轻松驾驭这款神奇的静态网站生成器。
-- [VuePress](https://newzone.top/web/VuePress.html) - VuePress v2建站攻略：从基础环境搭建到theme-hope主题深度定制。涵盖搜索插件、Webpack打包优化及性能调优技巧，助你构建专业静态文档网站。
