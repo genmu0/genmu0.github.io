@@ -70,13 +70,6 @@ export default sidebar({
       children: "structure",
     },
     {
-      text: "加密目录",
-      icon: "material-symbols:encrypted",
-      prefix: "encrypt/",
-      collapsible: true,
-      children: "structure",
-    },
-    {
       text: "博客文章",
       icon: "fa6-solid:feather-pointed",
       prefix: "_posts/",
