@@ -4,12 +4,35 @@
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/logo.svg</icon>
-  <updated>2026-11-04T19:56:23.872Z</updated>
+  <updated>2026-11-04T20:00:37.474Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
   <category term="工具"/>
   <category term="使用指南"/>
+  <entry>
+    <title type="text">Colorblind Math Diagrams</title>
+    <id>https://newzone.top/ColorBlind.html</id>
+    <link href="https://newzone.top/ColorBlind.html"/>
+    <updated>2026-11-04T20:00:13.000Z</updated>
+    <summary type="html"><![CDATA[<p>每日仪式是个人生活习惯的核心。它看起来可能会显得固化、死板、功利，有人反馈「透露着一股形式主义气息」，但是，这正是我想要的：<strong>遵循一个固定、程序化的流程，有规律地养成习惯</strong>，实现自我提升。</p>
+<div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<p>详细的身体护理步骤请参阅《<a href="https://newzone.top/the-savvy-life-manual/" target="_blank" rel="noopener noreferrer">精致生活手册</a>》，包含血管拉伸、淋巴按摩、保湿护肤等专题。</p>
+</div>]]></summary>
+    <content type="html"><![CDATA[<p>每日仪式是个人生活习惯的核心。它看起来可能会显得固化、死板、功利，有人反馈「透露着一股形式主义气息」，但是，这正是我想要的：<strong>遵循一个固定、程序化的流程，有规律地养成习惯</strong>，实现自我提升。</p>
+<div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<p>详细的身体护理步骤请参阅《<a href="https://newzone.top/the-savvy-life-manual/" target="_blank" rel="noopener noreferrer">精致生活手册</a>》，包含血管拉伸、淋巴按摩、保湿护肤等专题。</p>
+</div>
+<h2>仪式清单</h2>
+<h3>🌅 晨间仪式 (05:00 - 08:00)</h3>
+<p><strong>目标</strong>：唤醒身体，确立今日目标，利用黄金时间完成高价值工作。</p>
+<p>| 时间      | 活动           | 关键细节                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| :</p>
+]]></content>
+    <published>2026-11-04T16:35:52.000Z</published>
+  </entry>
   <entry>
     <title type="text">博客文章样例 2</title>
     <id>https://newzone.top/posts/2024-03-02-blog_example2.html</id>

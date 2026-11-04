@@ -7,6 +7,18 @@
   "favicon": "https://newzone.top/logo.svg",
   "items": [
     {
+      "title": "Colorblind Math Diagrams",
+      "url": "https://newzone.top/ColorBlind.html",
+      "id": "https://newzone.top/ColorBlind.html",
+      "summary": "想养成改变生活的良好习惯？探索这套每日仪式：从5AM Club的晨间方案，到GTD时间管理，再到自我监控。学习如何通过固定流程，实现高效的自我提升。",
+      "content_html": "<p>每日仪式是个人生活习惯的核心。它看起来可能会显得固化、死板、功利，有人反馈「透露着一股形式主义气息」，但是，这正是我想要的：<strong>遵循一个固定、程序化的流程，有规律地养成习惯</strong>，实现自我提升。</p>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">Tips</p>\n<p>详细的身体护理步骤请参阅《<a href=\"https://newzone.top/the-savvy-life-manual/\" target=\"_blank\" rel=\"noopener noreferrer\">精致生活手册</a>》，包含血管拉伸、淋巴按摩、保湿护肤等专题。</p>\n</div>\n<h2>仪式清单</h2>\n<h3>🌅 晨间仪式 (05:00 - 08:00)</h3>\n<p><strong>目标</strong>：唤醒身体，确立今日目标，利用黄金时间完成高价值工作。</p>\n<p>| 时间      | 活动           | 关键细节                                                                                                                                                                                                                                                                                                                                                                                                                  |\n| :</p>\n",
+      "image": "https://img.newzone.top/2022-11-02-11-02-43.png?imageMogr2/format/webp \"GTD 任务转移到清单\"",
+      "date_published": "2026-11-04T16:35:52.000Z",
+      "date_modified": "2026-11-04T20:00:13.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
       "title": "博客文章样例 2",
       "url": "https://newzone.top/posts/2024-03-02-blog_example2.html",
       "id": "https://newzone.top/posts/2024-03-02-blog_example2.html",
