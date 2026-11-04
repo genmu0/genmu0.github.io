@@ -4,7 +4,7 @@ import { sidebar } from "vuepress-theme-hope";
 // https://fontawesome.com/search?m=free&o=r
 export default sidebar({
   "/": [
-    "DailyRoutine",
+    "ColorBlind",
     "Fitness",
     // 指定显示页面
     {
