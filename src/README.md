@@ -1,6 +1,6 @@
 ---
 article: false
-title: About
+title: Main Page
 description: A blog of Genmu's musings
 icon: fa6-solid:book-open-reader
 ---
