@@ -17,7 +17,7 @@ export default defineUserConfig({
   base: "/",
 
   // 网站语言，默认为中文
-  lang: "zh-CN",
+  lang: "en-us",
   // 网站标题
   title: "LearnData 开源笔记",
   // 网站描述
