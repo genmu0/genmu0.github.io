@@ -54,6 +54,6 @@ While Terence Tao is a staunch believer of collaboration in mathematics research
 
 When you see someone's name, face, and credentials, is the content in the book more or less true because of those things? Perhaps more or less likely to be true? Goodhart's law asserts that the more we rely on proxies as a true measure of something, the more valuable and more vulnerable to deception.
 
-## Source Used to Make this Website
+## Website Template
 - 🐛 This website was created using the [LearnData](https://github.com/rockbenben/LearnData) template.
 
