@@ -38,7 +38,7 @@ My main research interests are long form research textbooks known as monographs.
   - The theory of optimal attack describes the optimal path through a knowledge graph to maximize learning. It is named after how to seizing countries in *Risk* requires building up pieces; in our case, tackling topics requires building up prior knowledge.
   - The theory of knowledge, epistemology, is discussed in great detail under various assumptions of world models.
 
-## Q&A
+## ❓ Q&A
 **Q**: Why do independent mathematics research?
 **A**: The current state of academic publishing is relatively hostile to long-form math research. Only applied mathematics and physics that increases the wealth or secures the wealth of fat cats is given funding priority in academic institutions (read: energy and weapons, although weapons are merely the ability to \{store, direct, release\} energy). This is why our era has subtracted funding the humanities in secondary and post-secondary education to add funding to STEM. I do not oppose necessary militarization, but it has a cost.
 
