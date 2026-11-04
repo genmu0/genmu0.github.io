@@ -40,6 +40,7 @@ My main research interests are long form research textbooks known as monographs.
 
 ## ❓ Q&A
 **Q**: Why do independent mathematics research?
+
 **A**: The current state of academic publishing is relatively hostile to long-form math research. Only applied mathematics and physics that increases the wealth or secures the wealth of fat cats is given funding priority in academic institutions (read: energy and weapons, although weapons are merely the ability to \{store, direct, release\} energy). This is why our era has subtracted funding the humanities in secondary and post-secondary education to add funding to STEM. I do not oppose necessary militarization, but it has a cost.
 
 I did some research during my time in graduate school, but I was unfortunately experienced academic dishonesty three times (yikes). I think it wise to not describe the academic institution in question. This is the mistake of trusting the myth of meritocracy.
@@ -47,9 +48,11 @@ I did some research during my time in graduate school, but I was unfortunately e
 While Terence Tao is a staunch believer of collaboration in mathematics research, I am less convinced. The current academic system prioritizes hiring by citation index, and the prestige (read: grant money) they bring to the institution. Unfortunately, systems like this are easy to hack via Goodhart's law. The current method of gaming this system is mass publication (high quantity, low quality) and hyperauthorship (many authors, unequal contribution).
 
 **Q**: Why not post on arXiv?
+
 **A**: The professors from my graduate program do not post on arXiv and are therefore not endorsers. They don't need to secure tenure, so they don't need what arXiv does for someone's career. I could ask for endorsements on arXiv, but I still firmly believe arguments should be evaluated on their own merits. 
 
 **Q**: Why use a pseudonym?
+
 **A**: I prefer no fame for my work, like Nicolas Bourbaki. I am also a public educator, and having controversial opinions attached to my name is bad for my socioeconomic status. I am as guilty of protecting my income as any other career academic, but I would like to take measures to minimize the harm to others.
 
 When you see someone's name, face, and credentials, is the content in the book more or less true because of those things? Perhaps more or less likely to be true? Goodhart's law asserts that the more we rely on proxies as a true measure of something, the more valuable and more vulnerable to deception.
