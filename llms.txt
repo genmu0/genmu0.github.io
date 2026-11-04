@@ -31,9 +31,6 @@
 - [数据库管理](https://newzone.top/deploy/MySQL.html) - 我的数据库是通过 MySQL 和 phpMyAdmin 进行管理的。本页面将记录遇到的日常问题及其解决办法。
 - [静态部署](https://newzone.top/deploy/Static.html) - 静态网站部署全解析。对比主流静态资源库与Vercel等平台，提供GitHub Actions自动同步FTP、OSS实战教程，助你选择并实施高效部署策略。
 - [服务器 VPS](https://newzone.top/deploy/VPS.html) - 部署应用前，为服务器配置好包管理工具，以便节省部署时间。主流的前端包管理工具有 npm、yarn、pnpm、以及国内的镜像 cnpm、tyarn 等，这些包管理器都是基于 nodejs。
-- [加密](https://newzone.top/encrypt/) - 加密内容，支持 Markdown 和 HTML 语言。
-- [加密 1](https://newzone.top/encrypt/encrypt01.html) - 加密内容，支持 Markdown 和 HTML 语言。
-- [加密 2](https://newzone.top/encrypt/encrypt02.html) - 加密内容，支持 Markdown 和 HTML 语言。
 - [网购攻略](https://newzone.top/family/Coupon.html) - 网购如何省钱？这份超全攻略带你玩转淘宝、拼多多、京东、1688等主流电商平台。从大额优惠券、购物返利到挖掘品牌代工厂，助你成为真正的省钱达人，避开消费陷阱。
 - [健康饮食](https://newzone.top/family/Diet.html) - 科学饮食全攻略！从调整进食顺序、培养良好习惯，到分享零食饮料选择和冷泡燕麦做法。更有源自《程序员延寿指南》的健康理论和21天减肥食谱，助你吃出健康好身材。
 - [个人记录](https://newzone.top/family/Life.html) - 实用生活经验分享。涵盖个人护理（理发、穿搭）、家居妙用（铷磁铁、固定器），及玻璃自爆处理、网线更换等琐事。一系列经过实践检验的小窍门，助你轻松应对日常。
