@@ -47,9 +47,11 @@ I did some research during my time in graduate school, but I was unfortunately e
 
 While Terence Tao is a staunch believer of collaboration in mathematics research, I am less convinced. The current academic system prioritizes hiring by citation index, and the prestige (read: grant money) they bring to the institution. Unfortunately, systems like this are easy to hack via Goodhart's law. The current method of gaming this system is mass publication (high quantity, low quality) and hyperauthorship (many authors, unequal contribution).
 
+
 **Q**: Why not post on arXiv?
 
 **A**: The professors from my graduate program do not post on arXiv and are therefore not endorsers. They don't need to secure tenure, so they don't need what arXiv does for someone's career. I could ask for endorsements on arXiv, but I still firmly believe arguments should be evaluated on their own merits. 
+
 
 **Q**: Why use a pseudonym?
 
