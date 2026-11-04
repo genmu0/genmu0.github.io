@@ -4,14 +4,18 @@ title: Colorblind Math Diagrams
 description: 想养成改变生活的良好习惯？探索这套每日仪式：从5AM Club的晨间方案，到GTD时间管理，再到自我监控。学习如何通过固定流程，实现高效的自我提升。
 ---
 
-每日仪式是个人生活习惯的核心。它看起来可能会显得固化、死板、功利，有人反馈「透露着一股形式主义气息」，但是，这正是我想要的：**遵循一个固定、程序化的流程，有规律地养成习惯**，实现自我提升。
+In this article, we will discuss strategies to make colorblind friendly diagrams in the mathematical sciences. We use Inkscape as our open-source SVG file editor and export to PNG at any resolution.
 
 > [!TIP]
-> 详细的身体护理步骤请参阅《[精致生活手册](https://newzone.top/the-savvy-life-manual/)》，包含血管拉伸、淋巴按摩、保湿护肤等专题。
+> Approximately 1 in 12 males and 1 in 200 females have some form of colorblindness.
 
-## 仪式清单
+## Color Communicates
+Color is an excellent way to convey information in a figure, displaying the similarity or dissimilarity between objects in space. While black and white diagrams are necessarily colorblind friendly, we lose a channel of communication to convey similarity. We want to split the middle in terms of user accessibility and information density.
 
-### 🌅 晨间仪式 (05:00 - 08:00)
+## Okabe-Ito Color Palette
+The Okabe-Ito color palette is an excellent discrete color palette for qualitative color palettes. It is available in most programming languages, becoming included in base R as of version 4.0.0. This makes it excellent for communicating categories or classes in a diagram.
+![](https://github.com/genmu0/BSM-Recolor/blob/main/Figure%2016.4.A.png)
+However, there are a few things we need to test when making these diagrams that us individuals with color vision may take for granted.
 
 **目标**：唤醒身体，确立今日目标，利用黄金时间完成高价值工作。
 
