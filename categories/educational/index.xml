@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Educational on BloGenMusings</title>
+		<link>/categories/educational/</link>
+		<description>Recent content in Educational on BloGenMusings</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="/categories/educational/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>ColorBlind Math Diagrams</title>
+				<link>/2026/11/11/colorblind-math-diagrams/</link>
+				<pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>/2026/11/11/colorblind-math-diagrams/</guid>
+				<description>&lt;p&gt;In this article, we will discuss strategies to make colorblind friendly diagrams in the mathematical sciences. We use Inkscape as our open-source SVG file editor and export to PNG at any resolution. We compare the colorblind friendliness of diagrams for each of the three colorblindness types via a colorblind simulator.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Note:&#xA;Approximately 1 in 12 males and 1 in 200 females have some form of colorblindness. Red, green and blue correspond to protanopia, deuteranopia, and tritanopia respectively.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
+</rss>

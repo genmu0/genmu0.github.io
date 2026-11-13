@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.169.0">
+
+
+<title>ColorBlind Math Diagrams - BloGenMusings</title>
+<meta property="og:title" content="ColorBlind Math Diagrams - BloGenMusings">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">GitHub</a></li>
+    
+    <li><a href="https://twitter.com/rstudio">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">5 min read</span>
+    
+
+    <h1 class="article-title">ColorBlind Math Diagrams</h1>
+
+    
+    <span class="article-date">2026-11-11</span>
+    
+
+    <div class="article-content">
+      
+      <p>In this article, we will discuss strategies to make colorblind friendly diagrams in the mathematical sciences. We use Inkscape as our open-source SVG file editor and export to PNG at any resolution. We compare the colorblind friendliness of diagrams for each of the three colorblindness types via a colorblind simulator.</p>
+<blockquote>
+<p>Note:
+Approximately 1 in 12 males and 1 in 200 females have some form of colorblindness. Red, green and blue correspond to protanopia, deuteranopia, and tritanopia respectively.</p>
+</blockquote>
+<h2 id="color-communicates">Color Communicates</h2>
+<p>Color is an excellent way to convey information in a figure, displaying the similarity or dissimilarity between objects in space. While black and white diagrams are necessarily colorblind friendly, we lose a channel of communication to convey similarity. We want to split the middle in terms of user accessibility and information density.</p>
+<blockquote>
+<p>Note:
+Use a secondary marker such as shape or pattern to distinguish classes when possible.</p>
+</blockquote>
+<h2 id="okabe-ito-color-palette">Okabe-Ito Color Palette</h2>
+<p>The Okabe-Ito color palette is an excellent discrete color palette for qualitative color palettes. It is available in most programming languages, becoming included in base R as of version 4.0.0. This makes it excellent for communicating categories or classes in a diagram. However, there are a few things we need to test when making these diagrams that us individuals with color vision may take for granted.</p>
+<p>Here is the color palette presented using memorable names for each shade and the hexadecimal code:</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">Name</th>
+					<th style="text-align: center">Code</th>
+					<th style="text-align: center">Reference</th>
+					<th style="text-align: center">Protanopia</th>
+					<th style="text-align: center">Deuteranopia</th>
+					<th style="text-align: center">Tritanopia</th>
+					<th style="text-align: center">Achromatopsia</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">Black</td>
+					<td style="text-align: center">#000000</td>
+					<td style="text-align: center"><img src="images/OI_Black.png" width="100" height="100"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Cinnabar</td>
+					<td style="text-align: center">#D55E00</td>
+					<td style="text-align: center"><img src="images/OI_Cinnabar.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Cinnabar_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Cinnabar_Deuteranopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Cinnabar_Tritanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Cinnabar_Achromatopsia.png" width="100" height="100"></td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Sunset</td>
+					<td style="text-align: center">#E69F00</td>
+					<td style="text-align: center"><img src="images/OI_Sunset.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sunset_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sunset_Deuteranopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sunset_Tritanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sunset_Achromatopsia.png" width="100" height="100"></td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Sunshine</td>
+					<td style="text-align: center">#F0E442</td>
+					<td style="text-align: center"><img src="images/OI_Sunshine.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sunshine_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sunshine_Deuteranopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sunshine_Tritanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sunshine_Achromatopsia.png" width="100" height="100"></td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Emerald</td>
+					<td style="text-align: center">#009E73</td>
+					<td style="text-align: center"><img src="images/OI_Emerald_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Emerald_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Emerald_Deuteranopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Emerald_Tritanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Emerald_Achromatopsia.png" width="100" height="100"></td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Sky</td>
+					<td style="text-align: center">#56B4E9</td>
+					<td style="text-align: center"><img src="images/OI_Sky_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sky.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sky_Deuteranopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sky_Tritanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sky_Achromatopsia.png" width="100" height="100"></td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Ocean</td>
+					<td style="text-align: center">#0072B2</td>
+					<td style="text-align: center"><img src="images/OI_Ocean.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Ocean_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Ocean_Deuteranopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Ocean_Tritanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Ocean_Achromatopsia.png" width="100" height="100"></td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Abyss</td>
+					<td style="text-align: center">#001A33</td>
+					<td style="text-align: center"><img src="images/OI_Abyss.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Abyss_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Abyss_Deuteranopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Abyss_Tritanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Abyss_Achromatopsia.png" width="100" height="100"></td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Sakura</td>
+					<td style="text-align: center">#CC79A7</td>
+					<td style="text-align: center"><img src="images/OI_Sakura.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sakura_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sakura_Deuteranopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sakura_Tritanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Sakura_Achromatopsia.png" width="100" height="100"></td>
+			</tr>
+	</tbody>
+</table>
+<p>Abyss is not in the original Okabe-Ito color palette, but I recommend it for both a hue and brightness contrast. Abyss is named after the abyssal zone of the ocean, and its dark blue contrasts well with Sunshine&rsquo;s bright yellow.</p>
+<p>The colorblindness is simulated using COBLIS V2 using <a href="https://rgblind.com/color-blindness-simulator">this website</a>. It is also worth nothing that individuals experience colorblindness in different ways, thus the simulated colorblindness may not reflect their experiences.</p>
+<h2 id="colorblindness-types">Colorblindness Types</h2>
+<p>Protanopia is colorblindness of red wavelengths of electromagnetic radiation, and protanomaly is a weakness in the perception of red. A red weak individual may still perceive bright reds, but darker reds such as wine, blood red, or maroon may appear black.</p>
+<p>Deuteranopia is colorblindness of green wavelengths of light. Due to the frequency of red and green light being similar, individuals with protanopia and deuteranopia have a colorblindness that is <em>mostly</em> the same.</p>
+<p>Tritanopia is colorblindness of blue wavelengths of light, and blue is light frequency that Earth&rsquo;s sun emits most strongly. Blue cone cells do not overlap much with red cone cells and green cone cells in the eye, creating a strong contrast with all three color types.</p>
+<p>Achromatopsia is the rarest colorblindness type, and such individuals practically in black and white.</p>
+<h2 id="optimizing-clarity">Optimizing Clarity</h2>
+<p>Mathematics diagrams should be elegant and informative, clearly communicating information without overwhelming the viewer. At the same time, we need to frequently change our color palette to avoid feeling stale where possible. Using shades of grey colorblind friendly for everyone, but it is visually dull and indistinct when overused. Except for individuals with achromatopsia of course.</p>
+<h2 id="orange-and-blue-dichotomy">Orange and Blue Dichotomy</h2>
+<p>Orange and blue are frequently used in game design to maximize the contrast available to a player. The three shades of Orange {Cinnabar, Sunset, Sunshine} are visually distinct from each other when adjacent. The three shades of Blue {Sky, Ocean, Abyss} are visually distinct from each other when adjacent.</p>
+<p>Here is a comparison of the Orange-Blue colors under simulated Protanopia, Deuteranopia, Tritanopia, and Achromatopsia:</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">Name</th>
+					<th style="text-align: center">Reference</th>
+					<th style="text-align: center">Protanopia</th>
+					<th style="text-align: center">Deuteranopia</th>
+					<th style="text-align: center">Tritanopia</th>
+					<th style="text-align: center">Achromatopsia</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">Orange-Blue</td>
+					<td style="text-align: center"><img src="images/OI_Orange_Blue.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Orange_Blue_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Orange_Blue_Deuteranopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Orange_Blue_Tritanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Orange_Blue_Achromatopsia.png" width="100" height="100"></td>
+			</tr>
+	</tbody>
+</table>
+<blockquote>
+<p>Note:
+The safest colors to use for colorblindness are Sunshine-Abyss, Sunshine-Ocean, Sunset-Ocean or Sunshine-Sky.</p>
+</blockquote>
+<p>Here, we can see that almost all possible two-color subsets or three-color subsets are visually distinct. When using a three-color subset, consider using the rarer of Blue or Orange for the most important element to indicate. When using the full five-color set, consider the importance of communicating similarity or dissimilarity between Orange elements and Blue elements. The only issue is that Sunshine is difficult to distinguish against White by itself, therefore <strong>R</strong> documentation recommends a golden yellow instead #F5C710.</p>
+<blockquote>
+<p>Note:
+Sunset and Sky have the same brightness, appearing as the same color for individuals with achromatopsia. This implies that a sunset sky hardly appears different for individuals with achromatopsia. Rarely an issue, but worth considering.</p>
+</blockquote>
+<h2 id="avoid-emerald-and-sakura">Avoid Emerald and Sakura</h2>
+<blockquote>
+<p>Note:
+Consider what is required when communicating in the diagram. Do I need to imply that two distinctly colored objects are related? Does my diagram require two objects are similar in hue AND distinct from one color? Emerald and Sakura are perfectly fine when we simply need to communicate unrelated classes. Emerald and Sakura should not be used if we must imply that they are related to our Orange or Blue classes.</p>
+</blockquote>
+<p>Here is a visual of the issue of pairing inversion for all three color types:</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">Name</th>
+					<th style="text-align: center">Reference</th>
+					<th style="text-align: center">Protanopia</th>
+					<th style="text-align: center">Deuteranopia</th>
+					<th style="text-align: center">Tritanopia</th>
+					<th style="text-align: center">Achromatopsia</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">Emerald-Sakura</td>
+					<td style="text-align: center"><img src="images/OI_Emerald_Sakura.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Emerald_Sakura_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Emerald_Sakura_Deuteranopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Emerald_Sakura_Tritanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_Emerald_Sakura_Achromatopsia.png" width="100" height="100"></td>
+			</tr>
+	</tbody>
+</table>
+<p>Emerald appears <em>obviously</em> Orange with Protanopia, <em>slightly</em> Orange Deuteranopia but appears <em>obviously</em> Blue with Tritanopia. Sakura appears <em>obviously</em> Blue with Protanopia, <em>slightly</em> Blue with Deuteranopia but appears <em>obviously</em> Orange with Tritanopia. This hue inversion is due neighborhood on the hue wheel.</p>
+<p>The sensitivity of Emerald and Sakura to colorblindness type is best described using my logo:</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">Name</th>
+					<th style="text-align: center">Reference</th>
+					<th style="text-align: center">Protanopia</th>
+					<th style="text-align: center">Deuteranopia</th>
+					<th style="text-align: center">Tritanopia</th>
+					<th style="text-align: center">Achromatopsia</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">OI Hue Wheel</td>
+					<td style="text-align: center"><img src="images/OI_wheel.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_wheel_Protanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_wheel_Deuteranopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_wheel_Tritanopia.png" width="100" height="100"></td>
+					<td style="text-align: center"><img src="images/OI_wheel_Achromatopsia.png" width="100" height="100"></td>
+			</tr>
+	</tbody>
+</table>
+<p>The Okabe-Ito hue wheel has Emerald and Sakura between Orange and Blue, but who they are &ldquo;nearest&rdquo; to will slightly shift depending on the unique color perception of each individual. If we assume that a trichromatic individual&rsquo;s color representation is a vector space with three orthogonal vectors, a colorblind individual&rsquo;s unique perception is the projection onto that vector space onto a orthogonal basis with only two vectors or one color.</p>
+<h2 id="consider-other-palettes">Consider Other Palettes</h2>
+<p>Okabe-Ito was designed as a categorical color scheme for discrete classes, but it is not the best color scheme for continuous numbers. The <strong>viridis</strong> color map uses a yellow and dark blue dichotomy similar to Sunshine and Ocean.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+
+    
+  </body>
+</html>
+

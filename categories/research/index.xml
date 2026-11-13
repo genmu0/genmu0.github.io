@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Research on BloGenMusings</title>
+		<link>/categories/research/</link>
+		<description>Recent content in Research on BloGenMusings</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="/categories/research/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Low Rank Dynamical Systems</title>
+				<link>/2026/11/12/low-rank-dynamical-systems/</link>
+				<pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>/2026/11/12/low-rank-dynamical-systems/</guid>
+				<description>&lt;p&gt;This blog post is about low-rank approximations of dynamical systems.&lt;/p&gt;&#xA;&lt;h1 id=&#34;motivation&#34;&gt;Motivation&lt;/h1&gt;&#xA;&lt;p&gt;Many dynamical systems in the real world, such as formation of storms or protein-folding, are far too complex to describe in full. We turn to low-rank approximations of dynamical systems in order to predict these systems.&lt;/p&gt;&#xA;&lt;h1 id=&#34;formalism&#34;&gt;Formalism&lt;/h1&gt;&#xA;&lt;p&gt;A matrix &lt;code&gt;\(M\)&lt;/code&gt; has a rank of &lt;code&gt;\(a\)&lt;/code&gt; if it has &lt;code&gt;\(a\)&lt;/code&gt; linearly independent column vectors. We may state that &lt;code&gt;\({rank}(\cdot)\)&lt;/code&gt; is a function that returns an integer &lt;code&gt;\({rank}(M)\)&lt;/code&gt; that counts the number of independent column vectors.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

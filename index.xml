@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>BloGenMusings</title>
+		<link>/</link>
+		<description>Recent content on BloGenMusings</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Low Rank Dynamical Systems</title>
+				<link>/2026/11/12/low-rank-dynamical-systems/</link>
+				<pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>/2026/11/12/low-rank-dynamical-systems/</guid>
+				<description>&lt;p&gt;This blog post is about low-rank approximations of dynamical systems.&lt;/p&gt;&#xA;&lt;h1 id=&#34;motivation&#34;&gt;Motivation&lt;/h1&gt;&#xA;&lt;p&gt;Many dynamical systems in the real world, such as formation of storms or protein-folding, are far too complex to describe in full. We turn to low-rank approximations of dynamical systems in order to predict these systems.&lt;/p&gt;&#xA;&lt;h1 id=&#34;formalism&#34;&gt;Formalism&lt;/h1&gt;&#xA;&lt;p&gt;A matrix &lt;code&gt;\(M\)&lt;/code&gt; has a rank of &lt;code&gt;\(a\)&lt;/code&gt; if it has &lt;code&gt;\(a\)&lt;/code&gt; linearly independent column vectors. We may state that &lt;code&gt;\({rank}(\cdot)\)&lt;/code&gt; is a function that returns an integer &lt;code&gt;\({rank}(M)\)&lt;/code&gt; that counts the number of independent column vectors.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>ColorBlind Math Diagrams</title>
+				<link>/2026/11/11/colorblind-math-diagrams/</link>
+				<pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>/2026/11/11/colorblind-math-diagrams/</guid>
+				<description>&lt;p&gt;In this article, we will discuss strategies to make colorblind friendly diagrams in the mathematical sciences. We use Inkscape as our open-source SVG file editor and export to PNG at any resolution. We compare the colorblind friendliness of diagrams for each of the three colorblindness types via a colorblind simulator.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Note:&#xA;Approximately 1 in 12 males and 1 in 200 females have some form of colorblindness. Red, green and blue correspond to protanopia, deuteranopia, and tritanopia respectively.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Goodbye Sailor Sei-boku</title>
+				<link>/2026/11/09/goodbye-sailor-seiboku/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>/2026/11/09/goodbye-sailor-seiboku/</guid>
+				<description>&lt;h1 id=&#34;the-end-of-an-era&#34;&gt;The End of an Era&lt;/h1&gt;&#xA;&lt;p&gt;Sailor Sei-boku has been my go to fountain pen ink for at least 6 years ever since the start of graduate school. I originally chose it for its waterproofness, its lightfastness, and its amazing color. To a mathematician like myself, it was the ultimate ink for capturing my thoughts for review over several years. In the odd case that for some reason my writings are of importance like Einstein&amp;rsquo;s Zurich notebook, then that permanence is of important is to preserve my documentation for future generations.&#xA;&lt;img src=&#34;images/Leonardo_Seiboku.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Main Page</title>
+				<link>/about/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>/about/</guid>
+				<description>&lt;h2 id=&#34;-about-me&#34;&gt;🎓 About Me&lt;/h2&gt;&#xA;&lt;p&gt;My name is Genmu Zero. Public school math teacher by day, independent researcher by night. I attended public universities for my Mathematics Bachelor&amp;rsquo;s and Statistics Master&amp;rsquo;s. I did my student teaching residency and got my Math Education Master&amp;rsquo;s between drafts of my first monograph. My personal philosophy is that arguments in mathematics and philosophy should be evaluated on their own merits, and therefore I dislike advertising my credentials like this. Since we do not live in a meritocracy, I must advertise my credentials so that you can tell that I am very good at math or something.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Personal on BloGenMusings</title>
+		<link>/categories/personal/</link>
+		<description>Recent content in Personal on BloGenMusings</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="/categories/personal/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Goodbye Sailor Sei-boku</title>
+				<link>/2026/11/09/goodbye-sailor-seiboku/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>/2026/11/09/goodbye-sailor-seiboku/</guid>
+				<description>&lt;h1 id=&#34;the-end-of-an-era&#34;&gt;The End of an Era&lt;/h1&gt;&#xA;&lt;p&gt;Sailor Sei-boku has been my go to fountain pen ink for at least 6 years ever since the start of graduate school. I originally chose it for its waterproofness, its lightfastness, and its amazing color. To a mathematician like myself, it was the ultimate ink for capturing my thoughts for review over several years. In the odd case that for some reason my writings are of importance like Einstein&amp;rsquo;s Zurich notebook, then that permanence is of important is to preserve my documentation for future generations.&#xA;&lt;img src=&#34;images/Leonardo_Seiboku.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
