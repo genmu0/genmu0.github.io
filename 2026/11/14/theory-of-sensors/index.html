@@ -57,7 +57,7 @@
 
   <article class="article">
     
-    <span class="article-duration">5 min read</span>
+    <span class="article-duration">6 min read</span>
     
 
     <h1 class="article-title">Theory of Sensors</h1>
@@ -73,10 +73,10 @@
 <p>The prior discussion or low rank dynamical systems brings into question the issue of sensors. A sensor by definition senses a subset of the state space in time and space.</p>
 <h1 id="assumptions">Assumptions</h1>
 <p>Let us pretend the universe obeys a simple stochastic cellular automaton on 3D. Each cell <code>\(x\)</code> is a cube in a 3D lattice. A cell&rsquo;s future state has a <code>\(0.5\)</code> probability from the set <code>\(\{0, 1\}\)</code> and it has a <code>\(0.5\)</code> probability of copying one of its six neighbors. Let us pretend our universe is finite but still rather large, such as 1 million cells along each dimension.</p>
-<p>The entire universe is governed by the stochastic process <code>\(X_t\)</code>, and it start in the initial state <code>\(X_0\)</code> as an arrangement of multiple cells <code>\(x\)</code>. The set of possible states is called the state space <code>\(\mathcal X\)</code>, and it defines each possible universe configuration as <code>\(\hat X_1,\hat X_2,...,\hat X_\theta\)</code>. We know that there are at most:
-<code>$$\theta =2^{3 \cdot 1000000}$$</code>
-possible states.</p>
-<p>We can claim that this finite universe behaves according to a finite Markov chain. We can model this Markov chain using a stochastic transition matrix <code>\(P_{\theta \times\theta}\)</code>. To get the probability distribution of any state at time <code>\(t\)</code>, we simply take the matrix power <code>\(P^t\)</code> and choose the row corresponding to the initial configuration for <code>\(X_0\)</code>.</p>
+<p>The entire universe is governed by the stochastic process <code>\(X_t\)</code>, and it start in the initial state <code>\(X_0\)</code> as an arrangement of multiple cells <code>\(x\)</code>. The set of possible states is called the state space <code>\(\mathcal X\)</code>, and it defines each possible universe configuration as <code>\(\hat X_1,\hat X_2,...,\hat X_{\theta}\)</code>. We know that there are at exactly:
+<code>$$\theta =2^{N_1}$$</code>
+possible states because we defined our universe to be Boolean states with <code>\(N_1 = 3 \cdot 1000000\)</code> cells.</p>
+<p>We can claim that this finite universe behaves according to a finite Markov chain. We can model this Markov chain using a stochastic transition matrix <code>\(P_{\theta \times\theta}\)</code>. The stochastic matrix <code>\(P\)</code> defines the stochastic relation <code>\(P: \mathcal X \rightarrow \mathcal X\)</code>. To get the probability distribution of any state at time <code>\(t\)</code>, we simply take the matrix power <code>\(P^t\)</code> and choose the row corresponding to the initial configuration for <code>\(X_0\)</code>.</p>
 <h1 id="the-first-reduction-of-time">The First Reduction of Time</h1>
 <p>Our sensor <code>\(S_t\)</code> is a stochastic process too, and it is a mere subset of <code>\(X_t\)</code>.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> It collects data at a rather slow rate of every <code>\(\tau\)</code> time steps where <code>\(\tau \in \mathbb N &gt; 1\)</code>. The best possible relation that it can figure out is using the low rank approximation formula:
 <code>$$Q = K^{+} P^t K$$</code>
@@ -84,30 +84,36 @@ in which <code>\(K\)</code> is the classification matrix. The sensor can at best
 <code>$$Q = K^{+} P^\tau K$$</code>
 Let us assume that we have the optimal classification matrix <code>\(K_{n \times m}\)</code> such that we always preserve the <code>\(\tau\)</code> largest eigenvalues of <code>\(P\)</code>.</p>
 <h1 id="the-second-reduction-of-space">The Second Reduction of Space</h1>
-<p>Due to <code>\(S\)</code> being a subset of <code>\(X\)</code>, we must define the unconditional probability distribution for each sensor cell <code>\(x \in S\)</code> given that we are ignorant of cells <code>\(x \notin S\)</code>. If our sensor <code>\(S\)</code> has <code>\(\eta\)</code> cells, then we can at best describe our cellular automaton using <code>\(R_{\eta \times \eta} \sim P_{\theta \times \theta}\)</code>. Our class stochastic matrix <code>\(Q\)</code> is now defined using this even smaller state space:
+<p>Due to <code>\(S\)</code> being a subset of <code>\(X\)</code>, we must define the unconditional probability distribution for each sensor cell <code>\(x \in S\)</code> given that we are ignorant of cells <code>\(x \notin S\)</code>. If our sensor <code>\(S\)</code> has <code>\(N_2\)</code> cells such that there are <code>\(\eta = 2^{N_2}\)</code> cells of <code>\(x\)</code>, then we can at best describe our cellular automaton using <code>\(R_{\eta \times \eta} \sim P_{\theta \times \theta}\)</code>. Our class stochastic matrix <code>\(Q\)</code> is now defined using this even smaller state space:
 <code>$$Q = K^+ R^\tau K$$</code>
-The amount of information loss from our reduced measurement space and our reduced measurement frequency compound. I want to point out that this <code>\(K\)</code> is not computed: It is a byproduct of our sensor confusing similar states.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+The amount of information loss from our reduced measurement space and our reduced measurement frequency compound. This stochastic matrix <code>\(R\)</code> defines the stochastic relation of <code>\(R: \mathcal S \rightarrow \mathcal S\)</code>. I want to point out that this <code>\(K\)</code> is not computed: It is a byproduct of our sensor confusing similar states.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <h1 id="the-third-reduction-of-data">The Third Reduction of Data</h1>
-<p>Worse still, our sensor can only collect data in the designated format such as <code>\(2^{100}\)</code>. This is because our sensor needs to &ldquo;waste space&rdquo; on memory, data formatting, and transmitting. That means we must construct <code>\(Q\)</code> from this finite data. This data <code>\(\Delta\)</code> is the running average of binary relations from the subset of <code>\(Q\)</code>. We then have a data state space <code>\(\mathcal \Delta = (\Delta_1,...,\Delta_?)\)</code> which is merely a count of binary relations. It is actually at this stage that how quickly and cleanly we can feed our raw data into storage that determines the <em>temporal bottleneck</em> <code>\(\tau\)</code>.</p>
-<p>This leaves us with the formula:
-<code>$$Q = K^+ \Delta K$$</code>
+<p>Worse still, our sensor can only collect data in the designated format such as <code>\(2^{100}\)</code>. This is because our sensor needs to &ldquo;waste space&rdquo; on memory, data formatting, and transmitting. That means we must construct <code>\(Q\)</code> from this finite data. This data <code>\(\Delta\)</code> is the running average of binary relations from the subset of <code>\(Q\)</code>. We then have a data state space <code>\(\mathcal \Delta = (\hat \Delta_1,...,\hat \Delta_\xi)\)</code> which is merely a count of binary relations.</p>
+<p>Each configuration <code>\(\hat \Delta\)</code> that our stochastic process of data <code>\(\Delta\)</code> may take upon is already scaled by the <em>temporal bottleneck</em> <code>\(\tau\)</code>. It is because this stage determines how quickly and cleanly we can feed our raw data into storage that determines the <code>\(\tau\)</code>. Each <code>\(\hat \Delta\)</code> is a configuration of <code>\(\delta\)</code> values which are also Boolean, but they are not <em>objectively real</em> in the way that <code>\(x\)</code> cells are. They are computational abstractions such as how we may invert the colors of an image.</p>
+<p>We define our stochastic matrix here as <code>\(M\)</code> in honor of Alan Turing&rsquo;s Turing machine, defining the stochastic relation <code>\(M: \mathcal \Delta \rightarrow \mathcal \Delta\)</code>. This leaves us with the formula:
+<code>$$Q = K^+ M K$$</code>
 Before we have even <em>acquired</em> our data to construct a modeling Markov chain <code>\(Q\)</code>, we have experienced multiple absurd layers of reduction.</p>
 <h1 id="the-silver-lining">The Silver Lining</h1>
 <p>Thankfully, there is a limit to how badly our compression have reduced our ability to make predictions. This is because only corruptions to classification matrix <code>\(K\)</code> will matter. We can rewrite this formula:
-<code>$$Q = K^+_3 \Delta K_3$$</code>
+<code>$$Q = K^+_3 M K_3$$</code>
 according to the classification corruption from the sensor-to-memory:
 <code>$$\iff Q = K^+_3 K^+_2 R^\tau K_2K_3$$</code>
 and according to the classification corruption from complete state space to reduced state space:
 <code>$$\iff Q = K^+_3 K^+_2 K^+_1 P^\tau K_1 K_2 K_3$$</code>
-As long as our errors in measurement are within class or only between classes that strongly communicate, our ability to make predictions is sound.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+As long as our errors in measurement are within class or only between classes that strongly communicate, our ability to make predictions is sound.[^3]</p>
+<p>The matrix <code>\(K_1\)</code> is technically not a binary classification matrix since it compresses along unconditional probability, but the increased precision of a soft classifier washes away quickly. It also washes away exactly by means of classification, or optimal confusion, in <em>most</em> cases. This compression gives us the stochastic relation <code>\(K_1: \mathcal X \rightarrow \mathcal S\)</code>.</p>
+<p>The matrix <code>\(K_2\)</code> is where we get our abstraction from objective <code>\(x\)</code> cells to subjective <code>\(\delta\)</code> data. This matrix gives us the stochastic relation <code>\(K_2: \mathcal S \rightarrow \mathcal \Delta\)</code>.</p>
+<p>The matrix <code>\(K_3\)</code> is where we must refine the Markov chain of our subjective data structure. This is where machine intelligence comes into play. Whereas <code>\(K_1\)</code> implies the importance of good sensors and <code>\(K_2\)</code> implies the importance of good processors, <code>\(K_3\)</code> emphasizes the importance of good algorithms. This gives us the relation of <code>\(K_3: \mathcal \Delta \rightarrow \mathcal \mu\)</code> where we use <code>\(\mu\)</code> to refer to &ldquo;measurement&rdquo;.</p>
 <h1 id="closing-remarks">Closing Remarks</h1>
 <p>Here we have tackled the impossible task of defining how sensors work upon the assumption of the universe as a stochastic cellular automaton. Plato&rsquo;s allegory of the cave was wrong in a way: With enough shadows, we can infer how reality works. We are restricted by the aperture of the lens, the quality of the brain, and the data we may collect, but it works nonetheless.</p>
 <p>This means we have three parameters with which to improve our ability to make predictions:</p>
 <ul>
 <li>Increase the size of the sensor <code>\(S\)</code></li>
 <li>Increase the signal-to-noise of the processed data <code>\(\Delta\)</code></li>
-<li>Increase the frequency of the sensor <code>\(1 / \tau\)</code> to write to storage</li>
+<li>Increase the frequency of the sensor <code>\(1 / \tau\)</code> to write to storage
+We may also apply the following fixes to more generally increase our ability</li>
 <li>Increase the number of sensors to mimic increased size and frequency.</li>
+<li>Increase the diversity of sensors to minimize redundancy.</li>
 </ul>
 <div class="footnotes" role="doc-endnotes">
 <hr>
@@ -117,9 +123,6 @@ As long as our errors in measurement are within class or only between classes th
 </li>
 <li id="fn:2">
 <p>We assume that our sensor state space <code>\(S\)</code> is only the &ldquo;data collecting part&rdquo;.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3">
-<p>I want to point out that <code>\(K_1\)</code> is technically not a binary classification matrix since it compresses along unconditional probability, but the increased precision of a soft classifier washes away quickly. It also washes away exactly by means of classification, or optimal confusion, in <em>most</em> cases.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
