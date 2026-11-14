@@ -57,7 +57,7 @@
 
   <article class="article">
     
-    <span class="article-duration">6 min read</span>
+    <span class="article-duration">8 min read</span>
     
 
     <h1 class="article-title">Theory of Sensors</h1>
@@ -88,7 +88,7 @@ Let us assume that we have the optimal classification matrix <code>\(K_{n \times
 <code>$$Q = K^+ R^\tau K$$</code>
 The amount of information loss from our reduced measurement space and our reduced measurement frequency compound. This stochastic matrix <code>\(R\)</code> defines the stochastic relation of <code>\(R: \mathcal S \rightarrow \mathcal S\)</code>. I want to point out that this <code>\(K\)</code> is not computed: It is a byproduct of our sensor confusing similar states.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <h1 id="the-third-reduction-of-data">The Third Reduction of Data</h1>
-<p>Worse still, our sensor can only collect data in the designated format such as <code>\(2^{100}\)</code>. This is because our sensor needs to &ldquo;waste space&rdquo; on memory, data formatting, and transmitting. That means we must construct <code>\(Q\)</code> from this finite data. This data <code>\(\Delta\)</code> is the running average of binary relations from the subset of <code>\(Q\)</code>. We then have a data state space <code>\(\mathcal \Delta = (\hat \Delta_1,...,\hat \Delta_\xi)\)</code> which is merely a count of binary relations.</p>
+<p>Worse still, our sensor can only collect data in the designated format such as <code>\(2^{100}\)</code>. This is because our sensor needs to &ldquo;waste space&rdquo; on memory, data formatting, and transmitting. That means we must construct <code>\(Q\)</code> from this finite data. This data <code>\(\Delta\)</code> is the running average of binary relations from the subset of <code>\(Q\)</code>. We then have a data state space <code>\(\mathcal \Delta = (\hat \Delta_1,...,\hat \Delta_\xi)\)</code> which is merely a count of binary relations. We define <code>\(\xi = 2^{N_3}\)</code> in which <code>\(N_3\)</code> is the size of the formatted data.</p>
 <p>Each configuration <code>\(\hat \Delta\)</code> that our stochastic process of data <code>\(\Delta\)</code> may take upon is already scaled by the <em>temporal bottleneck</em> <code>\(\tau\)</code>. It is because this stage determines how quickly and cleanly we can feed our raw data into storage that determines the <code>\(\tau\)</code>. Each <code>\(\hat \Delta\)</code> is a configuration of <code>\(\delta\)</code> values which are also Boolean, but they are not <em>objectively real</em> in the way that <code>\(x\)</code> cells are. They are computational abstractions such as how we may invert the colors of an image.</p>
 <p>We define our stochastic matrix here as <code>\(M\)</code> in honor of Alan Turing&rsquo;s Turing machine, defining the stochastic relation <code>\(M: \mathcal \Delta \rightarrow \mathcal \Delta\)</code>. This leaves us with the formula:
 <code>$$Q = K^+ M K$$</code>
@@ -100,12 +100,14 @@ according to the classification corruption from the sensor-to-memory:
 <code>$$\iff Q = K^+_3 K^+_2 R^\tau K_2K_3$$</code>
 and according to the classification corruption from complete state space to reduced state space:
 <code>$$\iff Q = K^+_3 K^+_2 K^+_1 P^\tau K_1 K_2 K_3$$</code>
-As long as our errors in measurement are within class or only between classes that strongly communicate, our ability to make predictions is sound.[^3]</p>
-<p>The matrix <code>\(K_1\)</code> is technically not a binary classification matrix since it compresses along unconditional probability, but the increased precision of a soft classifier washes away quickly. It also washes away exactly by means of classification, or optimal confusion, in <em>most</em> cases. This compression gives us the stochastic relation <code>\(K_1: \mathcal X \rightarrow \mathcal S\)</code>.</p>
-<p>The matrix <code>\(K_2\)</code> is where we get our abstraction from objective <code>\(x\)</code> cells to subjective <code>\(\delta\)</code> data. This matrix gives us the stochastic relation <code>\(K_2: \mathcal S \rightarrow \mathcal \Delta\)</code>.</p>
-<p>The matrix <code>\(K_3\)</code> is where we must refine the Markov chain of our subjective data structure. This is where machine intelligence comes into play. Whereas <code>\(K_1\)</code> implies the importance of good sensors and <code>\(K_2\)</code> implies the importance of good processors, <code>\(K_3\)</code> emphasizes the importance of good algorithms. This gives us the relation of <code>\(K_3: \mathcal \Delta \rightarrow \mathcal \mu\)</code> where we use <code>\(\mu\)</code> to refer to &ldquo;measurement&rdquo;.</p>
+As long as our errors in measurement are within class or only between classes that strongly communicate, our ability to make predictions is sound.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>The matrix <code>\(K_1\)</code> is technically not a binary classification matrix since it compresses along unconditional probability, but the increased precision of a soft classifier washes away quickly. It also washes away exactly by means of classification, or optimal confusion, in <em>most</em> cases. This compression gives us the stochastic relation <code>\(K_1: \mathcal X \rightarrow \mathcal S\)</code> to translate <code>\(P\)</code> to <code>\(R\)</code>.</p>
+<p>The matrix <code>\(K_2\)</code> is where we get our abstraction from objective-literal cells <code>\(x\)</code>  to subjective-symbolic cells <code>\(\delta\)</code>.  While the light that hits an eye&rsquo;s photoreceptor is objective in a sense as well as the neural impulse that is sent to the brain is objective, the specific encoding after the signal is sent is not objective. This matrix gives us the stochastic relation <code>\(K_2: \mathcal S \rightarrow \mathcal \Delta\)</code> to translate <code>\(R\)</code> to <code>\(M\)</code>.<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>The matrix <code>\(K_3\)</code> is where we must refine the Markov chain of our subjective data structure. This is where machine intelligence comes into play. Whereas <code>\(K_1\)</code> implies the importance of good sensors and <code>\(K_2\)</code> implies the importance of good processors, <code>\(K_3\)</code> emphasizes the importance of good algorithms. This gives us the relation of <code>\(K_3: \mathcal \Delta \rightarrow \mathcal \Phi\)</code> to translate <code>\(M\)</code> to <code>\(Q\)</code>. We use <code>\(\Phi\)</code> to refer to &ldquo;phenomenon&rdquo;.</p>
+<p>This gives the final layer in the stack where <code>\(Q: \mathcal \Phi \rightarrow \mathcal \Phi\)</code> represents the mapping of phenomenon to phenomenon. The phenomenon Markov chain <code>\(Q\)</code> is what is measurable in the physics sense, but it is not a baseline description of reality of noumenon. That honor goes to the original matrix <code>\(P\)</code>, which can describe reality without contingency to measure. The simple stochastic cellular automaton that we described before does describe local transitions according to measure, which is why <code>\(Q\)</code> is capable of approximating <code>\(P\)</code>. The validity of symbolic cells <code>\(\delta\)</code> depends on its derivation: that literal cells <code>\(x\)</code> measure each other.</p>
 <h1 id="closing-remarks">Closing Remarks</h1>
 <p>Here we have tackled the impossible task of defining how sensors work upon the assumption of the universe as a stochastic cellular automaton. Plato&rsquo;s allegory of the cave was wrong in a way: With enough shadows, we can infer how reality works. We are restricted by the aperture of the lens, the quality of the brain, and the data we may collect, but it works nonetheless.</p>
+<p>The much coarser model provided by the stochastic matrix <code>\(Q\)</code> is sufficient for a human brain to perceive and predict the trajectory of a ball, but it is insufficient to perceive and predict the trajectory of an atom. Furthermore, the Markov model data that is implemented in <code>\(Q\)</code> is not easily translated across individuals due to subjectivity in architecture of the sensor and processor.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
 <p>This means we have three parameters with which to improve our ability to make predictions:</p>
 <ul>
 <li>Increase the size of the sensor <code>\(S\)</code></li>
@@ -115,6 +117,7 @@ We may also apply the following fixes to more generally increase our ability</li
 <li>Increase the number of sensors to mimic increased size and frequency.</li>
 <li>Increase the diversity of sensors to minimize redundancy.</li>
 </ul>
+<p>A discussion of control systems theory depends on the ideas discussed in this article. Robotics control systems are simple when we are dealing with familiar contexts. The scope of situations the robot can handle is necessarily finite compared to the infinite universe, and this scope is ideally a class as defined in the <a href="/2026/11/12/low-rank-dynamical-systems/">prior post</a> of low rank dynamical systems. This gets even stranger when we consider how a robot must interact when <a href="https://en.wikipedia.org/wiki/Reflexivity_(social_theory)">another complex being arrives</a>, such as an unfamiliar robot or animal.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -123,6 +126,12 @@ We may also apply the following fixes to more generally increase our ability</li
 </li>
 <li id="fn:2">
 <p>We assume that our sensor state space <code>\(S\)</code> is only the &ldquo;data collecting part&rdquo;.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>It is important to collect enough data points to fully develop <code>\(M\)</code>, but <code>\(Q\)</code> does not need as many data points since we only are concerned with longer-term trends.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>The data that is developed for an individual&rsquo;s <code>\(Q\)</code> is difficult to port because it assumes context, a specific finite distribution in an infinite world. The scope that <code>\(Q\)</code> can handle is finite, meaning that a damaged robot or injured human needs to relearn the context of how to move when they were once unharmed&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
