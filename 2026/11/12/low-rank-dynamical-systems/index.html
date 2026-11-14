@@ -62,7 +62,7 @@
 
   <article class="article">
     
-    <span class="article-duration">9 min read</span>
+    <span class="article-duration">10 min read</span>
     
 
     <h1 class="article-title">Low Rank Dynamical Systems</h1>
@@ -78,7 +78,7 @@
 <p>Many dynamical systems in the real world, such as formation of storms or protein-folding, are far too complex to describe in full. We turn to low-rank approximations of dynamical systems in order to predict these systems.</p>
 <h1 id="formalism">Formalism</h1>
 <p>A matrix <code>\(M\)</code> has a rank of <code>\(a\)</code> if it has <code>\(a\)</code> linearly independent column vectors. We may state that <code>\({rank}(\cdot)\)</code> is a function that returns an integer <code>\({rank}(M)\)</code> that counts the number of independent column vectors.</p>
-<p>We claim that a stochastic transition matrix <code>\(P\)</code> can be approximated with a low-rank stochastic matrix <code>\(Q_{m \times m}\)</code> by combining the states of <code>\(P_{n \times n}\)</code> into &ldquo;almost&rdquo; communication classes. The formula
+<p>We claim that a stochastic transition matrix <code>\(P\)</code> can be approximated with a low-rank stochastic matrix <code>\(Q_{m \times m}\)</code> by combining the states of <code>\(P_{n \times n}\)</code> into &ldquo;almost&rdquo; communication classes. The formula:
 <code>$$Q = K^{-1} P^t K$$</code>
 claims that <code>\(Q\)</code> is the class stochastic matrix of state transition matrix <code>\(P\)</code> at time <code>\(t\)</code> using the classification matrix <code>\(K_{n \times m}\)</code>. We replace the matrix inverse <code>\(K^{-1}\)</code> with the Moore-Penrose pseudoinverse: <code>\(K^+ \rightarrow K^{-1}\)</code>, to get a proper working formula.</p>
 <p>Inversely, we may approximate <code>\(P\)</code> using the form:
@@ -97,13 +97,13 @@ This idea is important for two reasons:</p>
 We have five classes in which states &ldquo;strongly communicate&rdquo; within each class and &ldquo;weakly communicate&rdquo; between classes.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> There are a total of 22 states, but the states within each class have a future distribution that is &ldquo;almost uniform&rdquo; within each class at some future time <code>\(t\)</code>.</p>
 <p>Suppose that we are interested in the protein-folding problem in biology. There are a lot of states that appear similar, but they can transition between five possible states in which they are locally stable. These meta-stable Markov chains are the implicit result of classification.</p>
 <h1 id="coding-estimated-number-of-classes">Coding: Estimated Number of Classes</h1>
-<p>We code the prior diagram in <strong>R</strong></p>
+<p>We code the prior diagram in <strong>R</strong>:</p>
 <pre><code class="language-r">library(MASS)
 library(ggplot2)
 library(LaplacesDemon)
 library(stats)
 </code></pre>
-<p>Let us construct <code>\(P\)</code> using <code>\(k\)</code> reducible Markov chains.</p>
+<p>Let us construct <code>\(P\)</code> using <code>\(k\)</code> reducible Markov chains:</p>
 <pre><code class="language-r">N &lt;- 22
 A.class = c(rep(1/2, 2), rep(0, N-2))
 B.class = c(rep(0,2), rep(1/3, 3), rep(0, N-5))
@@ -145,6 +145,7 @@ classes.estimate &lt;- function(P){
   return(k)
 }
 </code></pre>
+<p>We will return to our class estimation formula in a later section.</p>
 <p>We write use <strong>ggplot</strong> line to visualize our change in the estimated number of classes:</p>
 <pre><code class="language-r">k.ests = c()
 for(n in 0:20){
@@ -163,14 +164,14 @@ ggplot() + geom_line(aes(x=0:20, y = k.ests))
 </code></pre>
 <h1 id="theory">Theory</h1>
 <p>The formula that I use to calculate the estimated number of classes is given by this formula:
-<code>$$\lceil k(t) \rceil= \frac{n^2}{\sum\limits_{i=1}^n \sum\limits_{j=1}^n \Theta_{(i,j)}}$$</code>
-We define the matrix <code>\(\Theta(t)\)</code> as the correlation between row <code>\(i\)</code> and row <code>\(j\)</code> of matrix <code>\(P\)</code> at time <code>\(t\)</code>:
+<code>$$k(t) = \frac{n^2}{\sum\limits_{i=1}^n \sum\limits_{j=1}^n \Theta_{(i,j)}}$$</code>
+in which <code>\(m = \lceil k(t) \rceil\)</code> is the estimated number of classes. We define the matrix <code>\(\Theta(t)\)</code> as the correlation between row <code>\(i\)</code> and row <code>\(j\)</code> of matrix <code>\(P\)</code> at time <code>\(t\)</code>:
 <code>$$\Theta(t)_{(i,j)} = \frac{A \cdot B }{||A|| \cdot||B||}, \quad A= (P^t)_{(i,)}, B =   (P^t)_{(j,)}$$</code>
 The basic idea is that the estimated number of classes at time <code>\(t=0\)</code> is <code>$$\lceil k(0) \rceil =\frac{n^2}{n} = n$$</code>
 because the stochastic matrix at time <code>\(t=0\)</code> gives the identity matrix, <code>\(P^0 = I\)</code>. This means the matrix of cosine similarities <code>\(\Theta(0)\)</code> is the identity matrix <code>\(I\)</code> at time <code>\(t\)</code> = 0. Likewise, the estimated number of classes in the future <code>$$\lim_{t \rightarrow \infty} \lceil k(t) \rceil =\frac{n^2}{n^2} = 1$$</code>
 if and only if the stationary distribution is the uniform distribution.</p>
 <h2 id="coding-limiting-distribution-of-classes">Coding: Limiting Distribution of Classes</h2>
-<p>If there are separate Markov communication classes that are ergodic within each class, then the estimate <code>\(\lceil k(\infty) \rceil\)</code> is the simply the number of classes.</p>
+<p>If there are separate Markov communication classes that are ergodic within each class, then the estimate <code>\(\lceil k(\infty) \rceil\)</code> is the simply the number of classes:</p>
 <pre><code class="language-r">P = c(1/2, 1/2, 0, 0, 0,
       1/2, 1/2, 0, 0, 0,
       0, 0, 1/3, 1/3, 1/3,
@@ -190,7 +191,7 @@ k.ests
 ## [17] 1.923077 1.923077 1.923077 1.923077 1.923077
 </code></pre>
 <p>As we can see, the estimated number of classes is <code>\(\lceil k(\infty) \rceil= 2\)</code>. This demonstrates why it is that we need to round up, and we will never overestimate due to triangle inequality.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<p>If there are separate Markov communication classes, then the estimate <code>\(\lceil k(\infty) \rceil\)</code> is the recurrent-periodicity of all classes. If class <code>\(A\)</code> is recurrent and has a periodicity of <code>\(2\)</code> and class <code>\(B\)</code> is recurrent and has a periodicity of <code>\(3\)</code>, then the estimated number of classes is <code>\(\lceil k(\infty) \rceil = 5\)</code>.</p>
+<p>If there are separate Markov communication classes, then the estimate <code>\(\lceil k(\infty) \rceil\)</code> is the recurrent-periodicity of all classes. If class <code>\(A\)</code> is recurrent and has a periodicity of <code>\(2\)</code> and class <code>\(B\)</code> is recurrent and has a periodicity of <code>\(3\)</code>, then the estimated number of classes is <code>\(\lceil k(\infty) \rceil = 5\)</code>. Here is our example code:</p>
 <pre><code class="language-r">P = c(0, 1, 0, 0, 0,
       1, 0, 0, 0, 0,
       0, 0, 0, 1, 0,
@@ -323,7 +324,7 @@ theta = theta.new
 <p>We now check the mass distribution of each class and the number of non-empty classes.</p>
 <pre><code class="language-r">colSums(Z) 
 </code></pre>
-<pre><code>##  [1] 0 5 5 2 7 0 0 0 0 3
+<pre><code>##  [1] 7 0 2 0 5 0 5 0 0 3
 </code></pre>
 <p>Here we see that we have exactly the same structure as our original toy example, but with some extra classes. If we only try <code>\(k\)</code>-means with <code>\(5\)</code> classes, we get the occasional empty class. Excess classes pressures classes to form a <a href="https://en.wikipedia.org/wiki/Convex_hull">convex hull</a>.</p>
 <p>Here we can count the number of non-empty classes with a simple function.</p>
@@ -331,6 +332,11 @@ theta = theta.new
 </code></pre>
 <pre><code>## [1] 5
 </code></pre>
+<h1 id="critique-of-elbow-method">Critique of Elbow Method</h1>
+<p>An interesting implication of this research is that the <a href="https://en.wikipedia.org/wiki/Elbow_method_(clustering)">elbow method</a> is a rather non-rigorous way of determining the estimated number of classes. Since the estimated number of classes formula <code>\(k(t)\)</code> is governed by a linear combination of exponential functions <code>\(e^{\ln(\lambda) t}\)</code>, there is no &ldquo;optimum&rdquo; number of classes in the sense of local convex minima.</p>
+<p>This is essentially means that statistical practice of using the elbow method is fundamentally flawed. There is no optimal stopping point for clustering algorithms because the information gain of adding more clusters is a function like:
+<code>$$f(x) = \frac{1}{\sum e^{cx}}, \quad |c| \leq 1$$</code>
+is not optimizable. It is not possible to use a first-derivative test and second-derivative test on a function like this to determine a stopping point. If this is how <code>\(k(t)\)</code> works, and we can solve an optimal clustering using my k-means by correlation algorithm, then classic k-means clustering can optimize its classification but not its number of clusters.</p>
 <h1 id="closing-remarks">Closing Remarks</h1>
 <p>Dynamical systems such as weather are difficult to predict even with the most sophisticated measurement devices such as temperature, pressure, and wind speed. Class stochastic matrices allow us to approximate dynamical systems by removing unimportant eigenvalues. Assuming we did not make a mistake in identifying the system state, we can make long-range predictions without constantly measuring the system.</p>
 <p>AI prediction systems depend on the basic scheme of low rank approximation. Systems that can&rsquo;t see the forest for the trees&quot; focus on minimizing prediction error instead of state space error. This will cause them to say states are similar because of <strong>similarity in measurement</strong> instead of <strong>similarity in future distribution</strong>.</p>

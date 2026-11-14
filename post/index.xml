@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 14 Nov 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Theory of Sensors</title>
+				<link>/2026/11/14/theory-of-sensors/</link>
+				<pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>/2026/11/14/theory-of-sensors/</guid>
+				<description>&lt;p&gt;This blog post works best in tandem with my &lt;a href=&#34;/2026/11/12/low-rank-dynamical-systems/&#34;&gt;prior post&lt;/a&gt; of low rank dynamical systems.&lt;/p&gt;&#xA;&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;The prior discussion or low rank dynamical systems brings into question the issue of sensors. A sensor by definition senses a subset of the state space in time and space.&lt;/p&gt;&#xA;&lt;h1 id=&#34;assumptions&#34;&gt;Assumptions&lt;/h1&gt;&#xA;&lt;p&gt;Let us pretend the universe obeys a simple stochastic cellular automaton on 3D. Each cell &lt;code&gt;\(x\)&lt;/code&gt; is a cube in a 3D lattice. A cell&amp;rsquo;s future state has a &lt;code&gt;\(0.5\)&lt;/code&gt; probability from the set &lt;code&gt;\(\{0, 1\}\)&lt;/code&gt; and it has a &lt;code&gt;\(0.5\)&lt;/code&gt; probability of copying one of its six neighbors. Let us pretend our universe is finite but still rather large, such as 1 million cells along each dimension.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Low Rank Dynamical Systems</title>
 				<link>/2026/11/12/low-rank-dynamical-systems/</link>
