@@ -88,11 +88,11 @@ The amount of information loss from our reduced measurement space and our reduce
 <h1 id="the-third-reduction-of-data">The Third Reduction of Data</h1>
 <p>Worse still, our sensor can only collect data in the designated format such as <code>\(2^{100}\)</code>. This is because our sensor needs to &ldquo;waste space&rdquo; on memory, data formatting, and transmitting. That means we must construct <code>\(Q\)</code> from this finite data. This data <code>\(\Delta\)</code> is the running average of binary relations from the subset of <code>\(Q\)</code>. We then have a data state space <code>\(\mathcal \Delta = (\Delta_1,...,\Delta_?)\)</code> which is merely a count of binary relations. It is actually at this stage that how quickly and cleanly we can feed our raw data into storage that determines <code>\(\tau\)</code>.</p>
 <p>This leaves us with the formula:
-<code>$$Q = K^+ \Delta^\tau K$$</code>
+<code>$$Q = K^+ \Delta K$$</code>
 Before we have even <em>acquired</em> our data to construct a modeling Markov chain <code>\(Q\)</code>, we have experienced multiple absurd layers of reduction.</p>
 <h1 id="the-silver-lining">The Silver Lining</h1>
 <p>Thankfully, there is a limit to how badly our compression have reduced our ability to make predictions. This is because only corruptions to classification matrix <code>\(K\)</code> will matter. We can rewrite this formula:
-<code>$$Q = K^+_3 \Delta^\tau K_3$$</code>
+<code>$$Q = K^+_3 \Delta K_3$$</code>
 according to the classification corruption from the sensor-to-memory:
 <code>$$\iff Q = K^+_3 K^+_2 R^\tau K_2K_3$$</code>
 and according to the classification corruption from complete state space to reduced state space:
