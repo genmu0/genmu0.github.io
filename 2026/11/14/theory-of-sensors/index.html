@@ -82,7 +82,7 @@ possible states because we defined our universe to be Boolean states with <code>
 <code>$$Q = K^{+} P^t K$$</code>
 in which <code>\(K\)</code> is the classification matrix. The sensor can at best model the universe using the class stochastic matrix:
 <code>$$Q = K^{+} P^\tau K$$</code>
-Let us assume that we have the optimal classification matrix <code>\(K_{n \times m}\)</code> such that we always preserve the <code>\(\tau\)</code> largest eigenvalues of <code>\(P\)</code>.</p>
+Let us assume that we have the optimal classification matrix <code>\(K\)</code> such that we always preserve the <code>\(\tau\)</code> largest eigenvalues of <code>\(P\)</code>.</p>
 <h1 id="the-second-reduction-of-space">The Second Reduction of Space</h1>
 <p>Due to <code>\(S\)</code> being a subset of <code>\(X\)</code>, we must define the unconditional probability distribution for each sensor cell <code>\(x \in S\)</code> given that we are ignorant of cells <code>\(x \notin S\)</code>. If our sensor <code>\(S\)</code> has <code>\(N_2\)</code> cells such that there are <code>\(\eta = 2^{N_2}\)</code> cells of <code>\(x\)</code>, then we can at best describe our cellular automaton using <code>\(R_{\eta \times \eta} \sim P_{\theta \times \theta}\)</code>. Our class stochastic matrix <code>\(Q\)</code> is now defined using this even smaller state space:
 <code>$$Q = K^+ R^\tau K$$</code>
@@ -94,7 +94,7 @@ The amount of information loss from our reduced measurement space and our reduce
 <code>$$Q = K^+ M K$$</code>
 Before we have even <em>acquired</em> our data to construct a modeling Markov chain <code>\(Q\)</code>, we have experienced multiple absurd layers of reduction.</p>
 <h1 id="the-silver-lining">The Silver Lining</h1>
-<p>Thankfully, there is a limit to how badly our compression have reduced our ability to make predictions. This is because only corruptions to classification matrix <code>\(K\)</code> will matter. We can rewrite this formula:
+<p>Thankfully, there is a limit to how badly our compressions have reduced our ability to make predictions. This is because only corruptions of classification matrix <code>\(K\)</code> across <em>non-adjacent classes</em> is problematic. We can rewrite this formula by unfolding our layers:
 <code>$$Q = K^+_3 M K_3$$</code>
 according to the classification corruption from the sensor-to-memory:
 <code>$$\iff Q = K^+_3 K^+_2 R^\tau K_2K_3$$</code>
