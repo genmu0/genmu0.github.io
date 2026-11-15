@@ -36,7 +36,7 @@ img {
 
 table {
   margin: auto;
-  overflow: auto;
+  overflow-x: auto;
   border-top: 1px solid #023;
   border-bottom: 1px solid #023;
 }
