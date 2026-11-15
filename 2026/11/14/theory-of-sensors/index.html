@@ -110,13 +110,16 @@ As long as our errors in measurement are within class or only between classes th
 <p>The much coarser model provided by the stochastic matrix <code>\(Q\)</code> is sufficient for a human brain to perceive and predict the trajectory of a ball, but it is insufficient to perceive and predict the trajectory of an atom. Furthermore, the Markov model data that is implemented in <code>\(Q\)</code> is not easily translated across individuals due to subjectivity in architecture of the sensor and processor.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
 <p>This means we have three parameters with which to improve our ability to make predictions:</p>
 <ul>
-<li>Increase the size of the sensor <code>\(S\)</code></li>
-<li>Increase the signal-to-noise of the processed data <code>\(\Delta\)</code></li>
-<li>Increase the frequency of the sensor <code>\(1 / \tau\)</code> to write to storage
-We may also apply the following fixes to more generally increase our ability</li>
+<li>Increase the size and precision of the sensor <code>\(S\)</code> to improve <code>\(K_1\)</code>.</li>
+<li>Increase the signal clarity of data <code>\(\delta\)</code> to improve <code>\(K_2\)</code>.</li>
+<li>Increase the data samples and processor frequency <code>\(1/\tau\)</code> to improve <code>\(K_3\)</code>.</li>
+</ul>
+<p>We may also apply the following fixes to more generally increase our ability:</p>
+<ul>
 <li>Increase the number of sensors to mimic increased size and frequency.</li>
 <li>Increase the diversity of sensors to minimize redundancy.</li>
 </ul>
+<p>Increasing the diversity of sensors, such as hearing and vision, has the challenge of needing to synchronize the architecture of different senses.</p>
 <p>A discussion of control systems theory depends on the ideas discussed in this article. Robotics control systems are simple when we are dealing with familiar contexts. The <a href="https://en.wikipedia.org/wiki/Scope_(computer_programming)">scope</a> of situations the robot can handle is necessarily finite compared to the infinite universe, and this scope is ideally a class as defined in the <a href="/2026/11/12/low-rank-dynamical-systems/">prior post</a> of low rank dynamical systems. This gets even stranger when we consider how a robot must interact when <a href="https://en.wikipedia.org/wiki/Reflexivity_(social_theory)">another complex being arrives</a>, such as an unfamiliar robot or animal.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
